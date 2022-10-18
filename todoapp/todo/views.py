@@ -41,11 +41,11 @@ class TodoDetail(APIView) :
 
 
 
-class TodoGenericView(generics.ListCreateAPIView) :
+class TodoListCreate(generics.ListCreateAPIView) :
     queryset =Todo.objects.all()
     serializer_class =TodoSerializer
 
-class DetailTodoGenericView(generics.RetrieveUpdateDestroyAPIView) :
+class TodoUdateRetriveDelete(generics.RetrieveUpdateDestroyAPIView) :
     queryset =Todo.objects.all()
     serializer_class =TodoSerializer
 
